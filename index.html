@@ -27,6 +27,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projetos</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiência</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educação</a></li>
@@ -41,6 +42,7 @@
 
     <!-- Sections-->
     <div id="section-about-me"></div>
+    <div id="section-skills"></div>
     <div id="section-projects"></div>
     <div id="section-experience"></div>
     <div id="section-education"></div>
@@ -68,7 +70,7 @@
                 .catch(error => console.error(`Error loading ${b}:`, error));
         });
 
-        const sections = ['about-me', 'contact', 'education', 'projects', 'experience'];
+        const sections = ['about-me', 'contact', 'education', 'projects', 'experience', 'skills'];
         sections.forEach(section => {
             fetch(`body/sections/${section}.html`)
                 .then(response => response.text())

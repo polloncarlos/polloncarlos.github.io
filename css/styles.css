@@ -10506,3 +10506,16 @@ section#contact form#contactForm :-ms-input-placeholder {
 .portfolio-item:hover {
     transform: translateY(-5px);
 }
+
+/* Ajuste do texto das Hard Skills para ficar igual ao texto da Experiência */
+#skills .skill-card p {
+    font-size: 0.9rem;       /* mesmo tamanho do texto da experiência */
+    line-height: 1.5;        /* mesma altura de linha */
+    color: #6c757d;          /* mesma cor cinza usada no texto da experiência */
+    margin-bottom: 0.30rem;  /* espaçamento entre linhas */
+}
+
+#skills .skill-card h5 {
+    font-size: 1rem;         /* título menor que o ícone, mas destacado */
+    margin-bottom: 0.5rem;
+}
