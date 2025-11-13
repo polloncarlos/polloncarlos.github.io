@@ -10111,8 +10111,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/img/bg.jpg");
-  /* background-image: url("../assets/img/silver-and-black-laptop-computer-1229861.jpg"); */
+  background-image: url("../assets/img/bg3.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -10135,8 +10134,8 @@ header.masthead .masthead-heading {
 
 @media (min-width: 768px) {
   header.masthead {
-    padding-top: 17rem;
-    padding-bottom: 12.5rem;
+    padding-top: 13rem;
+    padding-bottom: 5.5rem;
   }
   header.masthead .masthead-subheading {
     font-size: 2.25rem;
@@ -10507,15 +10506,20 @@ section#contact form#contactForm :-ms-input-placeholder {
     transform: translateY(-5px);
 }
 
-/* Ajuste do texto das Hard Skills para ficar igual ao texto da Experiência */
+/* Ajuste do texto das Hard Skills*/
 #skills .skill-card p {
-    font-size: 0.9rem;       /* mesmo tamanho do texto da experiência */
-    line-height: 1.5;        /* mesma altura de linha */
-    color: #6c757d;          /* mesma cor cinza usada no texto da experiência */
-    margin-bottom: 0.30rem;  /* espaçamento entre linhas */
+    font-size: 0.9rem;       
+    line-height: 1.5;        
+    color: #6c757d;          
+    margin-bottom: 0.30rem;  
 }
 
 #skills .skill-card h5 {
-    font-size: 1rem;         /* título menor que o ícone, mas destacado */
+    font-size: 1rem;         
     margin-bottom: 0.5rem;
+}
+
+/* Remove itálico */
+#projects .portfolio-caption-subheading {
+    font-style: normal;
 }
