@@ -10506,20 +10506,40 @@ section#contact form#contactForm :-ms-input-placeholder {
     transform: translateY(-5px);
 }
 
-/* Ajuste do texto das Hard Skills*/
+/* Ajuste do texto das Hard Skills */
 #skills .skill-card p {
-    font-size: 0.9rem;       
-    line-height: 1.5;        
-    color: #6c757d;          
-    margin-bottom: 0.30rem;  
+    font-size: 1rem;          /* antes 0.9rem → aumento sutil */
+    line-height: 1.6;         
+    color: #6c757d;           
+    margin-bottom: 0.35rem;   
 }
 
 #skills .skill-card h5 {
-    font-size: 1rem;         
-    margin-bottom: 0.5rem;
+    font-size: 1.15rem;       /* antes 1rem → leve aumento também */
+    margin-bottom: 0.6rem;
 }
+
 
 /* Remove itálico */
 #projects .portfolio-caption-subheading {
     font-style: normal;
+}
+
+/* Ajuste de espaçamento entre título, subtítulo e descrição dos projetos */
+.portfolio-caption-heading {
+  margin-bottom: 8px; 
+}
+
+.portfolio-caption-subheading.text-muted b {
+  font-weight: 600;
+}
+
+.portfolio-caption-subheading.text-muted {
+  margin-bottom: 10px; 
+  line-height: 1.6; 
+}
+
+/* Espaçamento entre descrição e tecnologias */
+.portfolio-caption-subheading.text-muted div + div {
+  margin-top: 8px; 
 }
