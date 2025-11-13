@@ -54,3 +54,13 @@
     // Collapse the navbar when page is scrolled
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
+
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.querySelector('.navbar-brand.js-scroll-trigger');
+    if (logo) {
+        logo.addEventListener('click', function(e) {
+            e.preventDefault(); // remove o # da URL
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+});
