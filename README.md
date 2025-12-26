@@ -38,8 +38,9 @@ incluindo desde exploração de dados até modelos em produção.
 <ul>
   <li>
     <strong>Rossmann Sales Forecast</strong><br/>
-    Projeto end-to-end de previsão de vendas para 1.115 lojas,
-    utilizando CRISP-DM, XGBoost e deploy em produção com API e bot Telegram.<br/>
+    Projeto end-to-end de previsão de vendas diárias para mais de mil lojas da rede Rossmann, usando metodologia CRISP-DM para conectar análise de dados com solução de negócio.
+    O objetivo foi automatizar previsões de faturamento para apoiar decisões financeiras e operacionais, substituindo estimativas manuais por um modelo confiável.
+    Como resultado, foi entregue um modelo de Machine Learning em produção, acessível via API, com desempenho superior ao baseline e pronto para uso real no suporte à tomada de decisão.<br/>
     🔗 <a href="https://github.com/polloncarlos/rossmann_sales_predict" target="_blank">
       Ver repositório
     </a>
@@ -47,8 +48,9 @@ incluindo desde exploração de dados até modelos em produção.
   <br/>
   <li>
     <strong>Análise Global de Restaurantes (Zomato)</strong><br/>
-    Dashboard interativo para análise de avaliações, países e culinárias,
-    apoiando decisões estratégicas.<br/>
+    Dashboard interativo criado com Streamlit para explorar dados globais de restaurantes da plataforma Zomato, permitindo análises por localização, país, cidade e tipo de culinária.
+    O objetivo foi transformar um conjunto de dados público em uma ferramenta visual acessível que facilite a identificação de padrões e oportunidades estratégicas.
+    Como entrega final, o painel oferece visualizações navegáveis que apoiam decisões sobre mercados prioritários e preferências regionais.<br/>
     🔗 <a href="https://github.com/polloncarlos/zomato_restaurant" target="_blank">
       Ver repositório
     </a>
@@ -56,9 +58,20 @@ incluindo desde exploração de dados até modelos em produção.
   <br/>
   <li>
     <strong>Painel Gerencial de Marketplace Delivery</strong><br/>
-    Dashboard analítico com KPIs de desempenho de entregadores,
-    vendas e operação.<br/>
+    Dashboard interativo desenvolvido para analisar vendas, categorias de produtos e desempenho geral de uma empresa alimentar fictícia.
+    O objetivo foi fornecer uma visão clara dos principais indicadores de negócio e facilitar decisões gerenciais com base em dados reais de receita e sazonalidade.
+    Como resultado, a ferramenta oferece gráficos e filtros que destacam tendências de vendas, desempenho por categoria e padrões temporais relevantes.<br/>
     🔗 <a href="https://github.com/polloncarlos/curry_company" target="_blank">
+      Ver repositório
+    </a>
+  </li>
+  <br/>
+<li>
+    <strong>Ensaio de Machine Learning</strong><br/>
+    Projeto exploratório de Machine Learning focado em comparar desempenho e limitações de algoritmos de classificação, regressão e clusterização.
+    O objetivo foi experimentar abordagens distintas, aplicar técnicas de preparação e avaliação de dados e entender trade-offs como underfitting e overfitting.
+    Como resultado, foram gerados insights sobre performance, métrica e comportamento dos modelos, formando uma base sólida para projetos mais avançados.<br/>
+    🔗 <a href="https://github.com/polloncarlos/ensaio_machine_learning" target="_blank">
       Ver repositório
     </a>
   </li>
