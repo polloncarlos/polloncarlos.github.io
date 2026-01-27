@@ -46,6 +46,18 @@ incluindo desde exploração de dados até modelos em produção.
     </a>
   </li>
   <br/>
+
+  <li>
+    <strong>Health Insurance Cross-Sell Prediction</strong><br/>
+    Projeto de classificação supervisionada para prever a probabilidade de clientes de uma seguradora adquirirem um novo produto de seguro veícular.
+    O objetivo foi apoiar estratégias de cross-sell, priorizando leads com maior propensão de conversão e otimizando esforços comerciais.
+    Como resultado, foi desenvolvido um modelo de Machine Learning com validação por cross-validation e métricas de ranking (Gain e Lift), pronto para integração em pipelines de marketing e vendas.<br/>
+    🔗 <a href="https://github.com/polloncarlos/health_insurance_ranking" target="_blank">
+      Ver repositório
+    </a>
+  </li>
+  <br/>
+
   <li>
     <strong>Análise Global de Restaurantes (Zomato)</strong><br/>
     Dashboard interativo criado com Streamlit para explorar dados globais de restaurantes da plataforma Zomato, permitindo análises por localização, país, cidade e tipo de culinária.
