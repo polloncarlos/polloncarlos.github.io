@@ -37,6 +37,18 @@ incluindo desde exploração de dados até modelos em produção.
 
 <ul>
   <li>
+    <strong>Customer Value Segmentation</strong><br/>
+    Projeto end-to-end de segmentação de clientes de e-commerce utilizando técnicas de clusterização não supervisionada para identificar perfis de consumo, clientes VIP e grupos com risco de churn.
+    O objetivo foi transformar dados transacionais em inteligência de negócio, permitindo estratégias segmentadas de retenção, fidelização e crescimento.
+    Como resultado, foi desenvolvido um pipeline produtivo em cloud utilizando AWS (S3, EC2 e RDS PostgreSQL), com persistência dos clusters e dashboard executivo interativo via Metabase.<br/>
+    🔗 <a href="https://github.com/polloncarlos/customer_value_segmentation" target="_blank">
+      Ver repositório
+    </a>
+  </li>
+  <br/>
+
+
+  <li>
     <strong>Rossmann Sales Forecast</strong><br/>
     Projeto end-to-end de previsão de vendas diárias para mais de mil lojas da rede Rossmann, usando metodologia CRISP-DM para conectar análise de dados com solução de negócio.
     O objetivo foi automatizar previsões de faturamento para apoiar decisões financeiras e operacionais, substituindo estimativas manuais por um modelo confiável.
@@ -98,7 +110,10 @@ incluindo desde exploração de dados até modelos em produção.
   <li>Pandas, NumPy</li>
   <li>Scikit-learn, XGBoost</li>
   <li>Optuna</li>
-  <li>SQL</li>
+  <li>SQL & PostgreSQL</li>
+  <li>AWS (S3, EC2, RDS)</li>
+  <li>SQLAlchemy</li>
+  <li>Metabase</li>
   <li>Streamlit</li>
   <li>Flask</li>
   <li>Git & GitHub</li>

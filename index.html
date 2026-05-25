@@ -1,84 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Portfólio - Carlos Pollon</title>
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-    <!-- Font Awesome icons (free version)-->
-    <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
-    <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Carlos Pollon · Data Scientist. Projetos end-to-end de Machine Learning com deploy em produção." />
+  <title>Carlos Pollon · Data Scientist</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>P</text></svg>" />
 </head>
+<body>
 
-<body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">Carlos Pollon</a><button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu<i class="fas fa-bars ml-1"></i></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav text-uppercase ml-auto">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiência</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educação</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contato</a></li>
-                </ul>
-            </div>
+  <nav>
+    <a class="nav-logo" href="index.html">P.</a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <section class="hero reveal">
+      <h1>Olá, sou Carlos.</h1>
+      <p>
+        Data Scientist com background em Engenharia de Produção.
+        Desenvolvo <strong>soluções de Machine Learning end-to-end</strong> com foco em impacto real de negócio — da análise exploratória ao deploy em produção.
+      </p>
+    </section>
+
+    <section class="projects-grid">
+
+      <a class="project-card reveal reveal-delay-1" href="projects/customer-segmentation.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/customer_segmentation/customer_segmentation.png"/>
         </div>
-    </nav>
+        <h3><strong>Customer Value Segmentation</strong></h3>
+        <p>Pipeline end-to-end de segmentação de clientes com deploy em AWS. 35 clientes VIP identificados, responsáveis por 24% da receita.</p>
+      </a>
 
-    <!-- Header-->
-    <div id="header"></div>
+      <a class="project-card reveal reveal-delay-2" href="projects/health-insurance.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/health_insurance/ranking (2).png"/>
+        </div>
+        <h3><strong>Health Insurance Cross-Sell Ranking</strong></h3>
+        <p>Modelo de ranking para priorização comercial em cross-sell de seguros. Deploy via API com integração ao Google Sheets.</p>
+      </a>
 
-    <!-- Sections-->
-    <div id="section-about-me"></div>
-    <div id="section-skills"></div>
-    <div id="section-projects"></div>
-    <div id="section-experience"></div>
-    <div id="section-education"></div>
-    <div id="section-contact"></div>
+      <a class="project-card reveal reveal-delay-1" href="projects/rossmann.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/rossmann/rossmann3.png"/>
+        </div>
+        <h3><strong>Rossmann Sales Forecast</strong></h3>
+        <p>Previsão de vendas para mais de 1.000 lojas com XGBoost e Optuna. API em produção com bot no Telegram para consultas em tempo real.</p>
+      </a>
 
-    <!-- Footer-->
-    <div id="footer"></div> 
+      <a class="project-card reveal reveal-delay-2" href="projects/curry-company.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/curry_company/delivery_marketplace2.png"/>
+        </div>
+        <h3><strong>Marketplace Delivery Dashboard</strong></h3>
+        <p>Painel gerencial interativo para monitoramento de KPIs operacionais de um marketplace de food service.</p>
+      </a>
 
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <!-- Third party plugin JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+      <a class="project-card reveal reveal-delay-1" href="projects/zomato.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/zomato/restaurant_analytics.png"/>
+        </div>
+        <h3><strong>Global Restaurant Analytics</strong></h3>
+        <p>Dashboard interativo com análise global de restaurantes Zomato segmentado por país, cidade e tipo de culinária.</p>
+      </a>
 
-    <script>
-        const body = ['footer', 'header'];
-        body.forEach(b => {
-            fetch(`body/${b}.html`)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(`${b}`).outerHTML = data;
-                })
-                .catch(error => console.error(`Error loading ${b}:`, error));
-        });
+      <a class="project-card reveal reveal-delay-2" href="projects/ml-ensaio.html">
+        <div class="project-card-img">
+          <img src="assets/img/projects/ml_ensaio/machine_learning.png"/>
+        </div>
+        <h3><strong>Machine Learning Models Evaluation</strong></h3>
+        <p>Estudo comparativo de algoritmos de classificação, regressão e clusterização com análise de métricas e trade-offs.</p>
+      </a>
 
-        const sections = ['about-me', 'contact', 'education', 'projects', 'experience', 'skills'];
-        sections.forEach(section => {
-            fetch(`body/sections/${section}.html`)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById(`section-${section}`).outerHTML = data;
-                })
-                .catch(error => console.error(`Error loading ${section}:`, error));
-        });
-    </script>
+    </section>
+
+    <div class="contact-block reveal">
+      <p class="label">👋 Entre em contato</p>
+      <div class="contact-social-row">
+        <a class="btn-social" href="https://github.com/polloncarlos" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a class="btn-social" href="https://www.linkedin.com/in/carlos-pollon/" target="_blank">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a class="btn-social outline" href="mailto:carlos.pollon0015@gmail.com">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          E-mail
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="resume.html">Resume</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <span class="footer-right"><a href="https://www.linkedin.com/in/carlos-pollon/" target="_blank">LinkedIn</a></span>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
 </body>
 </html>
