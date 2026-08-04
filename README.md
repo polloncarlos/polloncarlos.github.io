@@ -37,6 +37,17 @@ incluindo desde exploração de dados até modelos em produção.
 
 <ul>
   <li>
+    <strong>Churn Prediction + A/B Testing + Uplift Modeling</strong><br/>
+    Pipeline de retenção de clientes em 3 camadas para um e-commerce, combinando um modelo de churn, um teste A/B com rigor estatístico e um modelo de uplift (T-Learner) para identificar quem realmente responde à campanha de retenção.
+    O objetivo foi ir além de prever quem sai: descobrir se a campanha reduz esse risco e, principalmente, para quem vale a pena gastar o orçamento de retenção.
+    Como resultado, o modelo de uplift identificou um grupo de clientes (Sleeping Dogs) para quem o cupom aumentava a chance de cancelamento, permitindo excluí-lo automaticamente da campanha — entregando ROC-AUC de 0,776 no churn e ROI de 51,7% por ciclo, validado por teste A/B (p=0,008).<br/>
+    🔗 <a href="https://github.com/polloncarlos/churn_ab_uplift_pipeline" target="_blank">
+      Ver repositório
+    </a>
+  </li>
+  <br/>
+
+  <li>
     <strong>Customer Value Segmentation</strong><br/>
     Projeto end-to-end de segmentação de clientes de e-commerce utilizando técnicas de clusterização não supervisionada para identificar perfis de consumo, clientes VIP e grupos com risco de churn.
     O objetivo foi transformar dados transacionais em inteligência de negócio, permitindo estratégias segmentadas de retenção, fidelização e crescimento.
@@ -60,7 +71,7 @@ incluindo desde exploração de dados até modelos em produção.
   <br/>
 
   <li>
-    <strong>Health Insurance Cross-Sell Prediction</strong><br/>
+    <strong>Health Insurance Cross-Sell Ranking</strong><br/>
     Projeto de classificação supervisionada para prever a probabilidade de clientes de uma seguradora adquirirem um novo produto de seguro veícular.
     O objetivo foi apoiar estratégias de cross-sell, priorizando leads com maior propensão de conversão e otimizando esforços comerciais.
     Como resultado, foi desenvolvido um modelo de Machine Learning com validação por cross-validation e métricas de ranking (Gain e Lift), pronto para integração em pipelines de marketing e vendas.<br/>
@@ -109,13 +120,15 @@ incluindo desde exploração de dados até modelos em produção.
   <li>Python</li>
   <li>Pandas, NumPy</li>
   <li>Scikit-learn, XGBoost</li>
+  <li>A/B Testing & Uplift Modeling (Causal Inference)</li>
   <li>Optuna</li>
   <li>SQL & PostgreSQL</li>
   <li>AWS (S3, EC2, RDS)</li>
   <li>SQLAlchemy</li>
   <li>Metabase</li>
   <li>Streamlit</li>
-  <li>Flask</li>
+  <li>Plotly, Matplotlib, Seaborn</li>
+  <li>Flask, Google Sheets API</li>
   <li>Git & GitHub</li>
 </ul>
 
