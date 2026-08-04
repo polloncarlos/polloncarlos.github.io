@@ -3,20 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rossmann Sales Forecast Carlos Pollon</title>
+  <title>Rossmann Sales Forecast - Carlos Pollon</title>
+  <script src="../js/theme-init.js"></script>
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>P</text></svg>" />
+  <link rel="icon" type="image/png" href="../assets/img/favicon/favicon-32.png" />
+  <link rel="apple-touch-icon" href="../assets/img/favicon/favicon-180.png" />
 </head>
 <body>
 
   <nav>
-    <a class="nav-logo" href="../index.html">P.</a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
+    <a class="nav-logo" href="../index.html">Carlos Pollon <span class="nav-logo-sep">|</span> Portfolio</a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+        <li><a href="../projects.html" class="active">Projetos</a></li>
+        <li><a href="../contact.html">Contato</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema claro/escuro" type="button">
+        <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" type="button">
+        <svg class="icon-menu-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg class="icon-menu-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
   </nav>
 
   <main class="page" style="max-width: 1000px;">
@@ -27,7 +39,7 @@
         <p class="meta">Data Scientist &bull; Solo</p>
       </div>
       <div class="project-hero-img">
-        <img src="../assets/img/projects/rossmann/rossmann_logo.jpg" alt="Rossmann" />
+        <img src="https://opengraph.githubassets.com/1/polloncarlos/rossmann_sales_predict" alt="Repositório rossmann_sales_predict no GitHub" />
       </div>
     </div>
 
@@ -54,88 +66,67 @@
 
     <div class="project-body">
 
-      <div class="project-img-full">
-        <img src="../assets/img/projects/rossmann/sales_vs_predictions_timeseries.png"/>
+      <div class="project-img-full reveal">
+        <img class="tall" src="../assets/img/projects/rossmann/rossmann_telegram_bot.png" alt="Bot no Telegram" />
       </div>
-      <p class="img-caption">Comparativo entre previsão do modelo e vendas reais nas lojas Rossmann.</p>
+      <p class="img-caption">Bot no Telegram: o gestor digita o número da loja e recebe a previsão de vendas na hora.</p>
 
-      <div class="project-section">
-        <h2>01. Visão Geral</h2>
+      <div class="project-section reveal">
+        <h2>O problema</h2>
         <p>
-          A rede varejista Rossmann precisava prever as vendas diárias de mais de 1.000 lojas
-          para planejar estoque e alocação de recursos com até 6 semanas de antecedência.
-        </p>
-        <p>
-          O projeto cobre o pipeline completo: análise exploratória, feature engineering,
-          seleção de variáveis, treinamento com validação temporal e deploy de API em produção com um diferencial: o modelo foi otimizado para rodar em ambiente com restrição
-          real de memória de 512 MB.
+          O CFO da rede varejista Rossmann decidiu iniciar reformas em parte das lojas, e para planejar o investimento precisava saber quanto cada loja ia faturar nas próximas 6 semanas. Até então, essa previsão era feita manualmente por cada gerente, sem padrão, sem considerar promoções, concorrência ou sazonalidade, cada um no seu critério.
         </p>
       </div>
 
-      <div class="project-section">
-        <h2>02. Insights de Negócio</h2>
+      <div class="project-section reveal">
+        <h2>O objetivo</h2>
         <p>
-          Lojas com competidores próximos apresentaram maior 
-          volume de vendas, sugerindo regiões com maior densidade de consumo.
+          Automatizar e padronizar a previsão de vendas de mais de 1.100 lojas, e colocar essa previsão na mão de quem realmente decide, sem depender de planilha ou critério pessoal de cada gerente.
         </p>
       </div>
 
-      <div class="project-img-full">
-        <img src="../assets/img/projects/rossmann/sales_by_competition_distance.png"/>
-      </div>
-      <p class="img-caption">Maior densidade competitiva associada a maior volume de vendas.</p>
-
-      <div class="project-section">
+      <div class="project-section reveal">
+        <h2>A solução</h2>
         <p>
-          Promoções consecutivas mostraram redução 
-          gradual de performance, indicando desgaste do estímulo promocional ao consumidor.
+          Um modelo de previsão treinado com XGBoost, validado de um jeito que respeita a ordem cronológica dos dados, simulando o cenário real de prever o futuro em vez de só acertar o passado. A entrega final não é um dashboard: é um bot no Telegram, onde o gestor digita o número da loja e recebe a previsão na hora, com comparação entre lojas e ranking automático das mais promissoras.
+        </p>
+        <p>
+          Um dos achados mais interessantes ao longo da análise: lojas com concorrentes por perto vendem mais, em média, do que lojas isoladas, o oposto do que se esperaria. A hipótese é que essas regiões concentram mais fluxo de consumidores.
         </p>
       </div>
 
-      <div class="project-img-full">
-        <img src="../assets/img/projects/rossmann/extended_promo_analysis.png"/>
+      <div class="project-img-full reveal">
+        <img src="../assets/img/projects/rossmann/sales_by_competition_distance.png" alt="Vendas por distância de concorrentes" />
       </div>
-      <p class="img-caption">Campanhas prolongadas demonstraram perda de performance.</p>
-      
-      <div class="project-section">
-        <h2>03. Abordagem Técnica</h2>
-        <ul>
-          <li>Regressão com XGBoost e tuning automatizado com Optuna</li>
-          <li>Seleção de features com Boruta + ExtraTrees</li>
-          <li>Validação cruzada temporal (time series split) para evitar data leakage</li>
-          <li>RMSE ≈ 910 vs 1.120 do baseline redução de 19%</li>
-          <li>Otimização de memória para deploy em Render (512 MB free tier)</li>
-        </ul>
+      <p class="img-caption">Lojas com concorrentes mais próximos venderam mais, em média, do que lojas isoladas.</p>
+
+      <div class="project-section reveal">
+        <h2>A decisão que fez diferença</h2>
+        <p>
+          A versão do modelo com melhor desempenho isolado não foi a escolhida para produção. Ela usava mais memória do que o servidor gratuito de deploy permitia. A versão final, com uma perda de performance de menos de 2%, rodava dentro do limite de memória disponível. Preferir um modelo levemente menos preciso, mas que realmente funciona em produção, valeu mais do que perseguir o melhor número num teste offline.
+        </p>
       </div>
 
-      <div class="metrics-row">
+      <div class="project-section reveal">
+        <h2>Resultado</h2>
+      </div>
+
+      <div class="metrics-row reveal">
         <div class="metric">
-          <span class="number">1.000+</span>
-          <span class="desc">Lojas<br>previstas</span>
+          <span class="number">1.115</span>
+          <span class="desc">lojas com previsão<br>automatizada</span>
         </div>
         <div class="metric">
-          <span class="number">910</span>
-          <span class="desc">RMSE final<br>(vs 1120 baseline)</span>
+          <span class="number">912</span>
+          <span class="desc">RMSE final<br>(vs 1.120 no modelo inicial)</span>
         </div>
         <div class="metric">
           <span class="number">−19%</span>
-          <span class="desc">Redução<br>de erro</span>
+          <span class="desc">de redução no erro<br>de previsão</span>
         </div>
       </div>
 
-      <div class="project-img-full">
-        <img class="tall" src="../assets/img/projects/rossmann/rossmann_telegram_bot.png" alt="Bot Telegram" />
-      </div>
-      <p class="img-caption">Bot no Telegram: gestor digita o número da loja e recebe a previsão de vendas instantaneamente.</p>
-
-      <div class="project-section">
-        <h2>04. Deploy</h2>
-        <p>
-          A API Flask foi deployada no Render com restrições de memória reais.
-          Um bot no Telegram permite que gestores consultem a previsão de vendas
-          de qualquer loja digitando apenas o ID sem necessidade de acessar
-          dashboards ou ferramentas técnicas.
-        </p>
+      <div class="project-section reveal" style="text-align: center;">
         <a href="https://github.com/polloncarlos/rossmann_sales_predict"
            target="_blank" class="btn" style="margin-top: 8px;">
           Ver no GitHub ↗
@@ -144,57 +135,56 @@
 
     </div>
 
-    <div class="more-projects">
+    <div class="more-projects reveal">
       <h3>Leia mais projetos</h3>
       <div class="more-grid">
         <a class="more-card" href="customer-segmentation.html">
-          <div class="more-card-img"><img src="../assets/img/projects/customer_segmentation/customer_segmentation.png"/>"/></div>
+          <div class="more-card-img"><img src="../assets/img/projects/customer_segmentation/dashboard_executive.png" alt="Customer Segmentation" /></div>
           <h4>Customer Segmentation</h4>
           <p>Clusterização com deploy AWS</p>
         </a>
         <a class="more-card" href="health-insurance.html">
-          <div class="more-card-img"><div class="placeholder"><img src="../assets/img/projects/health_insurance/ranking (2).png" alt="Health Insurance" /></div></div>
+          <div class="more-card-img"><img src="../assets/img/projects/health_insurance/gain_lift_precision_rf.png" alt="Health Insurance" /></div>
           <h4>Health Insurance Ranking</h4>
           <p>Ranking de propensão cross-sell</p>
         </a>
         <a class="more-card" href="zomato.html">
-          <div class="more-card-img"><div class="placeholder"><img src="../assets/img/projects/zomato/restaurant_analytics.png" alt="Global Restaurant Analysis" /></div></div>
+          <div class="more-card-img"><img src="../assets/img/projects/zomato/zomato_geo.png" alt="Global Restaurant Analysis" /></div>
           <h4>Global Restaurant Analytics</h4>
           <p>Painel gerencial de restaurantes</p>
         </a>
       </div>
     </div>
 
-        <div class="contact-block reveal">
-      <p class="label">👋 Entre em contato</p>
-      <div class="contact-social-row">
-        <a class="btn-social" href="https://github.com/polloncarlos" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a class="btn-social" href="https://www.linkedin.com/in/carlos-pollon/" target="_blank">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          LinkedIn
-        </a>
-        <a class="btn-social outline" href="mailto:carlos.pollon0015@gmail.com">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
-          E-mail
-        </a>
-      </div>
-    </div>
-
-  
-
   </main>
 
   <footer>
-    <ul class="footer-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="../resume.html">Resume</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
-    <span class="footer-right"><a href="https://www.linkedin.com/in/carlos-pollon/" target="_blank">LinkedIn</a></span>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Portfólio</h4>
+        <p>&copy; <span id="footerYear"></span> Carlos Pollon. Todos os direitos reservados.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Links</h4>
+        <a href="../about.html">Sobre</a>
+        <a href="../projects.html">Projetos</a>
+        <a href="../contact.html">Contato</a>
+      </div>
+      <div class="footer-col">
+        <h4>Conecte-se</h4>
+        <div class="footer-social">
+          <a href="https://github.com/polloncarlos" target="_blank" aria-label="GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/carlos-pollon/" target="_blank" aria-label="LinkedIn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:carlos.pollon0015@gmail.com" aria-label="E-mail">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="../js/main.js"></script>
   <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Voltar ao topo">
