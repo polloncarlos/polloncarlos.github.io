@@ -49,7 +49,7 @@
       </div>
       <div class="project-meta-item">
         <div class="meta-label">Stack</div>
-        <div class="meta-value">Python · XGBoost · Optuna · Scikit-learn<br>Scipy · Streamlit Cloud</div>
+        <div class="meta-value">Python · XGBoost · Optuna · Scikit-learn<br>SHAP · Scipy · Streamlit Cloud</div>
       </div>
       <div class="project-meta-item">
         <div class="meta-label">Período</div>
@@ -123,6 +123,24 @@
         <img src="../assets/img/projects/churn_ab_uplift/ab_results.png" alt="Resultado do teste A/B" />
       </div>
       <p class="img-caption">Resultado do teste A/B: a campanha reduziu o churn de forma estatisticamente comprovada.</p>
+
+      <div class="project-section reveal">
+        <h2>Explicando as decisões do modelo</h2>
+        <p>
+          Uma lista de clientes não basta: o time precisa justificar por que cada um foi incluído, e a área de risco precisa confiar que o modelo não está se apoiando num sinal errado.
+        </p>
+        <p>
+          Adicionei uma camada de explicabilidade que mostra, para cada cliente, quais fatores pesaram na decisão, e uma visão geral do que o modelo mais considera. A análise revelou algo que os números médios escondiam: o fator mais importante, o tempo de relacionamento do cliente, não age numa direção só. Há uma janela de risco nos primeiros meses e uma proteção forte que só aparece depois de um tempo de casa. Isso virou uma recomendação concreta de monitoramento para produção.
+        </p>
+        <p>
+          No dashboard, o time seleciona um cliente e vê, em linguagem de negócio, os fatores que o colocaram na lista.
+        </p>
+      </div>
+
+      <div class="project-img-full reveal">
+        <img src="../assets/img/projects/churn_ab_uplift/shap_customer_explanation.png" alt="Painel de explicação por cliente no dashboard" />
+      </div>
+      <p class="img-caption">O time seleciona um cliente e vê os fatores que o colocaram na lista, em linguagem de negócio.</p>
 
       <div class="project-section reveal">
         <h2>Resultado</h2>
