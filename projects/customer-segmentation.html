@@ -45,7 +45,7 @@
     <div class="project-meta-bar reveal">
       <div class="project-meta-item">
         <div class="meta-label">Tipo</div>
-        <div class="meta-value">ML em Produção<br>Clusterização</div>
+        <div class="meta-value">ML com deploy em nuvem<br>Clusterização</div>
       </div>
       <div class="project-meta-item">
         <div class="meta-label">Stack</div>
@@ -53,7 +53,7 @@
       </div>
       <div class="project-meta-item">
         <div class="meta-label">Período</div>
-        <div class="meta-value">Mai 2026<br>
+        <div class="meta-value">Mar a Mai 2026<br>
           <a href="https://github.com/polloncarlos/customer_value_segmentation" target="_blank"
              style="color: var(--text-muted); text-decoration: underline; font-size: 13px;">
             Ver no GitHub ↗
@@ -86,14 +86,14 @@
       <div class="project-section reveal">
         <h2>A solução</h2>
         <p>
-          Testados quatro algoritmos de clusterização sobre 17 variáveis de comportamento de compra (frequência, ticket médio, recência, devoluções). O pipeline roda de ponta a ponta na AWS: os dados são processados automaticamente e o dashboard executivo reflete os grupos em tempo real, sem precisar de ninguém rodando planilha manualmente.
+          Testados quatro algoritmos de clusterização sobre 17 variáveis de comportamento de compra (frequência, ticket médio, recência, devoluções). O pipeline foi publicado na AWS com treino e inferência separados: o modelo fica no S3, a inferência agendada no EC2 grava os grupos no RDS PostgreSQL e o dashboard no Metabase lê direto do banco.
         </p>
       </div>
 
       <div class="project-section reveal">
         <h2>A decisão que fez diferença</h2>
         <p>
-          Dos quatro algoritmos testados, os três melhores ficaram praticamente empatados (em torno de 0,72 num teste que mede o quão bem definidos são os grupos). Em vez de escolher o mais sofisticado, a decisão foi pelo mais simples: o KMeans é mais fácil de manter, mais estável quando o modelo é retreinado, e mais fácil de explicar para o time de negócio. Ganhar uma fração de ponto num teste técnico não valia a complexidade extra em produção.
+          Dos quatro algoritmos testados, os três melhores ficaram praticamente empatados (Silhouette em torno de 0,72) num experimento com embeddings de Random Forest + UMAP. O UMAP melhorava a separação, mas custava caro para rodar no EC2 gratuito. A decisão foi pelo mais simples: KMeans direto sobre as variáveis padronizadas, mais fácil de manter, mais estável ao retreinar e mais fácil de explicar. Ganhar separação num teste técnico não valia o custo extra no deploy.
         </p>
       </div>
 

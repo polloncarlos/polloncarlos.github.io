@@ -53,7 +53,7 @@
       </div>
       <div class="project-meta-item">
         <div class="meta-label">Período</div>
-        <div class="meta-value">Jun 2026<br>
+        <div class="meta-value">Mai a Jun 2026<br>
           <a href="https://github.com/polloncarlos/churn_ab_uplift_pipeline" target="_blank"
              style="color: var(--text-muted); text-decoration: underline; font-size: 13px;">
             Ver no GitHub ↗
@@ -65,21 +65,21 @@
     <div class="project-body">
 
       <div class="project-img-full reveal">
-        <img src="../assets/img/projects/churn_ab_uplift/dashboard_action_list.png" alt="Dashboard usado pelo time comercial" />
+        <img src="../assets/img/projects/churn_ab_uplift/dashboard_action_list.png" alt="Dashboard pensado para o time de CRM" />
       </div>
-      <p class="img-caption">Dashboard usado pelo time comercial: lista de clientes priorizados, com filtro de orçamento e exportação em Excel.</p>
+      <p class="img-caption">Dashboard pensado para o time de CRM: lista de clientes priorizados, com filtro de orçamento e exportação em Excel.</p>
 
       <div class="project-section reveal">
         <h2>O problema</h2>
         <p>
-          Um e-commerce com 4.300 clientes tinha um problema comum: quem ficava 90 dias sem comprar dificilmente voltava sozinho. A empresa já rodava uma campanha de retenção (cupom de 10% + e-mail), mas não sabia se ela realmente funcionava, nem para quem valia a pena usá-la. O orçamento por contato era limitado a R$ 15.
+          Um e-commerce com 4.300 clientes tem um problema comum: quem fica 90 dias sem comprar dificilmente volta sozinho. A pergunta do projeto: uma campanha de retenção (cupom de 10% + e-mail, R$ 15 por contato) funcionaria, e para quem valeria a pena usá-la? Como é projeto de portfólio, o resultado da campanha foi simulado.
         </p>
       </div>
 
       <div class="project-section reveal">
         <h2>O objetivo</h2>
         <p>
-          Responder três perguntas que a empresa não conseguia sozinha: quem está prestes a sair, se a campanha realmente reduz esse risco, e, o mais importante, para quem vale a pena gastar o orçamento.
+          Responder três perguntas: quem está prestes a sair, se a campanha reduziria esse risco e, o mais importante, para quem valeria a pena gastar o orçamento.
         </p>
       </div>
 
@@ -90,39 +90,42 @@
         </p>
         <ul>
           <li>Um modelo prevê quem está em risco de sair.</li>
-          <li>Um teste A/B mede, com rigor estatístico, se a campanha reduz esse risco.</li>
-          <li>Um modelo de uplift descobre para quem a campanha realmente funciona, e para quem ela não faz diferença.</li>
+          <li>Um teste A/B sobre a campanha simulada valida o desenho do experimento: tamanho de amostra, randomização e teste qui-quadrado.</li>
+          <li>Um modelo de uplift estima o efeito da campanha cliente a cliente.</li>
         </ul>
         <p>
-          O resultado é um dashboard onde o time comercial define o orçamento disponível e recebe automaticamente a lista de clientes prioritários para contatar.
+          O resultado é um dashboard onde o time de CRM definiria o orçamento e receberia a lista de clientes prioritários para contatar.
         </p>
       </div>
 
       <div class="project-section reveal">
-        <h2>A decisão que fez diferença</h2>
+        <h2>O que o uplift mostrou, e o que não mostrou</h2>
         <p>
-          Ao testar a campanha, o modelo separou os clientes em quatro grupos, dependendo de como cada um reage ao cupom:
+          O modelo de uplift separou os 1.134 clientes em risco em quatro grupos, pelo efeito estimado da campanha:
         </p>
         <ul>
-          <li><strong>Persuadible:</strong> só volta a comprar se receber o cupom. É o alvo certo da campanha.</li>
+          <li><strong>Persuadible:</strong> efeito estimado alto. É o alvo da campanha.</li>
           <li><strong>Sure Thing:</strong> voltaria a comprar de qualquer jeito. Mandar cupom pra esse grupo é gastar orçamento à toa.</li>
           <li><strong>Lost Cause:</strong> está de saída, e o cupom não muda isso.</li>
-          <li><strong>Sleeping Dog:</strong> o achado mais interessante. Pra esse grupo, o cupom na verdade <strong>aumenta</strong> a chance de cancelamento, em vez de reter, a campanha empurra o cliente pra fora.</li>
+          <li><strong>Sleeping Dog:</strong> efeito estimado negativo, como se o cupom aumentasse a chance de cancelamento.</li>
         </ul>
         <p>
-          Descobrir os Sleeping Dogs foi o que mudou a estratégia: em vez de mandar cupom pra todo mundo em risco, o sistema passou a excluir automaticamente esse grupo do contato, economizando orçamento e evitando um efeito colateral que ninguém tinha percebido antes.
+          No cenário simulado, focar nos 200 clientes de maior uplift estimado elevaria o ROI de 51,7% para 221,5%, com um quarto do orçamento.
+        </p>
+        <p>
+          Um detalhe virou aprendizado: na simulação, a campanha reduzia o risco de todo mundo na mesma proporção, então nenhum cliente piorava de verdade. Os 380 Sleeping Dogs vêm do erro de estimativa dos dois modelos do T-Learner (AUC entre 0,56 e 0,63). Um segmento que sai do uplift precisa ser checado antes de virar regra de negócio: com curva Qini em dados de teste e, no mundo real, com um novo experimento só naquele grupo.
         </p>
       </div>
 
       <div class="project-img-full reveal">
         <img src="../assets/img/projects/churn_ab_uplift/uplift_profiles.png" alt="Distribuição dos clientes nos quatro grupos" />
       </div>
-      <p class="img-caption">Os 1.134 clientes em risco, segmentados nos quatro grupos segundo a resposta esperada à campanha.</p>
+      <p class="img-caption">Os 1.134 clientes em risco, segmentados nos quatro grupos segundo o efeito estimado da campanha.</p>
 
       <div class="project-img-full reveal">
         <img src="../assets/img/projects/churn_ab_uplift/ab_results.png" alt="Resultado do teste A/B" />
       </div>
-      <p class="img-caption">Resultado do teste A/B: a campanha reduziu o churn de forma estatisticamente comprovada.</p>
+      <p class="img-caption">Resultado do teste A/B sobre a campanha simulada: o teste detectou o efeito definido na simulação (p = 0,008).</p>
 
       <div class="project-section reveal">
         <h2>Explicando as decisões do modelo</h2>
@@ -130,7 +133,7 @@
           Uma lista de clientes não basta: o time precisa justificar por que cada um foi incluído, e a área de risco precisa confiar que o modelo não está se apoiando num sinal errado.
         </p>
         <p>
-          Adicionei uma camada de explicabilidade que mostra, para cada cliente, quais fatores pesaram na decisão, e uma visão geral do que o modelo mais considera. A análise revelou algo que os números médios escondiam: o fator mais importante, o tempo de relacionamento do cliente, não age numa direção só. Há uma janela de risco nos primeiros meses e uma proteção forte que só aparece depois de um tempo de casa. Isso virou uma recomendação concreta de monitoramento para produção.
+          Adicionei uma camada de explicabilidade que mostra, para cada cliente, quais fatores pesaram na decisão, e uma visão geral do que o modelo mais considera. A análise revelou algo que os números médios escondiam: o fator mais importante, o tempo de relacionamento do cliente, não age numa direção só. Há uma janela de risco nos primeiros meses e uma proteção forte que só aparece depois de um tempo de casa. Isso virou uma recomendação de monitoramento caso o modelo fosse para produção.
         </p>
         <p>
           No dashboard, o time seleciona um cliente e vê, em linguagem de negócio, os fatores que o colocaram na lista.
@@ -153,11 +156,11 @@
         </div>
         <div class="metric">
           <span class="number">51,7%</span>
-          <span class="desc">de ROI por ciclo<br>validado com teste A/B</span>
+          <span class="desc">de ROI estimado<br>na campanha simulada</span>
         </div>
         <div class="metric">
           <span class="number">221,5%</span>
-          <span class="desc">de ROI no grupo que mais<br>responde à campanha</span>
+          <span class="desc">de ROI estimado focando<br>nos 200 de maior uplift</span>
         </div>
       </div>
 

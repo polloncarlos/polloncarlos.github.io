@@ -28,7 +28,7 @@ desenvolvido para apresentar projetos práticos, com foco em
 <p>
 Os projetos aqui apresentados seguem uma abordagem estruturada,
 priorizando clareza, impacto prático e aplicação em cenários reais,
-incluindo desde exploração de dados até modelos em produção.
+incluindo desde exploração de dados até modelos com deploy.
 </p>
 
 <hr/>
@@ -38,9 +38,9 @@ incluindo desde exploração de dados até modelos em produção.
 <ul>
   <li>
     <strong>Churn Prediction + A/B Testing + Uplift Modeling</strong><br/>
-    Pipeline de retenção de clientes em 3 camadas para um e-commerce, combinando um modelo de churn, um teste A/B com rigor estatístico e um modelo de uplift (T-Learner) para identificar quem realmente responde à campanha de retenção.
-    O objetivo foi ir além de prever quem sai: descobrir se a campanha reduz esse risco e, principalmente, para quem vale a pena gastar o orçamento de retenção.
-    Como resultado, o modelo de uplift identificou um grupo de clientes (Sleeping Dogs) para quem o cupom aumentava a chance de cancelamento, permitindo excluí-lo automaticamente da campanha — entregando ROC-AUC de 0,776 no churn e ROI de 51,7% por ciclo, validado por teste A/B (p=0,008).<br/>
+    Pipeline de retenção em 3 camadas: modelo de churn, teste A/B sobre campanha simulada e uplift (T-Learner) para estimar o efeito da campanha cliente a cliente.
+    O objetivo foi ir além de prever quem sai: testar o desenho do experimento que validaria a campanha e estimar para quem valeria a pena gastar o orçamento de retenção.
+    Resultado: ROC-AUC de 0,776 no churn e, no cenário simulado, ROI estimado de 51,7% no pool amplo e de 221,5% focando nos 200 clientes de maior uplift.<br/>
     🔗 <a href="https://github.com/polloncarlos/churn_ab_uplift_pipeline" target="_blank">
       Ver repositório
     </a>
@@ -63,7 +63,7 @@ incluindo desde exploração de dados até modelos em produção.
     <strong>Rossmann Sales Forecast</strong><br/>
     Projeto end-to-end de previsão de vendas diárias para mais de mil lojas da rede Rossmann, usando metodologia CRISP-DM para conectar análise de dados com solução de negócio.
     O objetivo foi automatizar previsões de faturamento para apoiar decisões financeiras e operacionais, substituindo estimativas manuais por um modelo confiável.
-    Como resultado, foi entregue um modelo de Machine Learning em produção, acessível via API, com desempenho superior ao baseline e pronto para uso real no suporte à tomada de decisão.<br/>
+    Como resultado, foi entregue um modelo com deploy via API Flask e bot no Telegram, com RMSE 19% menor que a primeira versão (912 x 1.120).<br/>
     🔗 <a href="https://github.com/polloncarlos/rossmann_sales_predict" target="_blank">
       Ver repositório
     </a>
@@ -72,7 +72,7 @@ incluindo desde exploração de dados até modelos em produção.
 
   <li>
     <strong>Health Insurance Cross-Sell Ranking</strong><br/>
-    Projeto de classificação supervisionada para prever a probabilidade de clientes de uma seguradora adquirirem um novo produto de seguro veícular.
+    Projeto de classificação supervisionada para prever a probabilidade de clientes de uma seguradora adquirirem um novo produto de seguro veicular.
     O objetivo foi apoiar estratégias de cross-sell, priorizando leads com maior propensão de conversão e otimizando esforços comerciais.
     Como resultado, foi desenvolvido um modelo de Machine Learning com validação por cross-validation e métricas de ranking (Gain e Lift), pronto para integração em pipelines de marketing e vendas.<br/>
     🔗 <a href="https://github.com/polloncarlos/health_insurance_ranking" target="_blank">
