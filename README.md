@@ -63,7 +63,7 @@ incluindo desde exploração de dados até modelos com deploy.
     <strong>Rossmann Sales Forecast</strong><br/>
     Projeto end-to-end de previsão de vendas diárias para mais de mil lojas da rede Rossmann, usando metodologia CRISP-DM para conectar análise de dados com solução de negócio.
     O objetivo foi automatizar previsões de faturamento para apoiar decisões financeiras e operacionais, substituindo estimativas manuais por um modelo confiável.
-    Como resultado, foi entregue um modelo com deploy via API Flask e bot no Telegram, com RMSE 19% menor que a primeira versão (912 x 1.120).<br/>
+    Como resultado, foi entregue um modelo com deploy via API Flask e bot no Telegram, com RMSE 50% menor que o baseline pela média (912 x 1.835).<br/>
     🔗 <a href="https://github.com/polloncarlos/rossmann_sales_predict" target="_blank">
       Ver repositório
     </a>
